@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body class="container">
+    <p id="hh"></p>
+    <form id="frm1">
+        <table id="tblinsert">
+            <tr>
+                <td>ID:</td>
+                <td id="tdorginal"><input type="number" id="tbID" /><span style="color:red"> *ID must be unique</span></td>
+                <td id="tdid" style="display:none">
+                    <select id="ddlid" onchange="myFunction()"></select>
+                </td>
+            </tr>
+            <tr id="rowName">
+                <td>Name:</td>
+                <td><input type="text" id="tbName" /></td>
+            </tr>
+            <tr id="rowLocation">
+                <td>Location:</td>
+                <td><input type="text" id="tbLocation" /></td>
+            </tr>
+            <tr id="rowdept">
+                <td>Dept:</td>
+                <td>
+                    <select id="tbLdept"></select>
+                </td>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+    </form>
+    <br />
+    <button id="btnInsert" onclick="Insert()" style="color:green;display:block">Save</button>
+    <button id="btnupdate" onclick="updte()" style="color:blue;display:none">Update</button>
+    <button id="btndel" onclick="del()" style="color:red;display:none">Delete</button>
+
+    <br /><br />
+    <button id="btnupdateshw" onclick="showupdte()" style="color:red">Update Employee details</button>
+    <button id="btndeleteshw" onclick="showdel()" style="color:blue">Delete Employee details</button>
+    <button id="btninsertshw" onclick="showin()" style="color:green;display:none">Save Employee details</button>
+    <br /><br />
+    <table id="tblGrid" cellpadding="10px" cellspacing="0" border="1" class="table table-striped table-hover">
+        <tr style="background-color:black;color:white;font-size:18px;">
+            <td>
+                ID
+            </td>
+            <td>
+                Name
+            </td>
+            <td>
+                Location
+            </td>
+            <td>
+                Department
+            </td>
+        </tr>
+    </table>
+    <script src="s.js"></script>
+</body>
+
+</html>
